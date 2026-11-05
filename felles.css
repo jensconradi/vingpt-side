@@ -1,47 +1,81 @@
-:root { color-scheme: dark; }
-body { margin:0; background:#1a090e; color:#f2e5d0; font:17px/1.65 -apple-system,system-ui,sans-serif; }
-main { max-width:640px; margin:0 auto; padding:48px 24px 80px; }
-h1 { font-family:Georgia,serif; color:#f2e5d0; font-size:2rem; margin:0 0 4px; }
-h2 { font-family:Georgia,serif; color:#d9b36a; font-size:1.2rem; margin:2.2em 0 .5em; }
-.moden { color:#bda58c; font-size:.9rem; margin-bottom:2em; }
-a { color:#d9b36a; }
+/* VinGPT-sida — felles stil. v3 05.11.2026: hero med telefon, Fraunces + Inter, kort med ikon. */
+:root {
+  color-scheme: dark;
+  --bg:#150709; --bg2:#23090f; --flate:#2a0f16; --kant:#3d1a24; --tekst:#f3e8d8; --dempet:#bfa48f;
+  --gull:#e2bd6d; --gull2:#f3dba0; --rod:#8d1f3a;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--tekst);
+  font:17px/1.6 Inter,-apple-system,system-ui,sans-serif;
+  background-image:
+    radial-gradient(900px 500px at 15% -10%, rgba(141,31,58,.45), transparent 60%),
+    radial-gradient(700px 500px at 100% 20%, rgba(226,189,109,.10), transparent 60%);
+  background-repeat:no-repeat; }
+main { max-width:1040px; margin:0 auto; padding:40px 24px 80px; }
+h1,h2,h3,.lofte { font-family:Fraunces,Georgia,serif; letter-spacing:-.01em; }
+h1 { font-size:1.6rem; margin:0; color:var(--tekst); }
+h2 { color:var(--gull); font-size:1.15rem; margin:2em 0 .4em; font-weight:600; }
+a { color:var(--gull); }
 strong { color:#fff; }
-ul { padding-left:1.2em; }
-footer { margin-top:4em; padding-top:1.5em; border-top:1px solid #3a2028; color:#bda58c; font-size:.85rem; }
-.glass { font-size:2.2rem; }
+.moden { color:var(--dempet); font-size:.9rem; margin-bottom:2em; }
+footer { margin-top:4em; padding-top:1.5em; border-top:1px solid var(--kant); color:var(--dempet); font-size:.85rem; }
 
-/* Landingsside (2026-10-12): ett løfte, App Store-knapp, tre skjermbilder — FAQ under */
-.hero { text-align:center; margin-bottom:2.5em; }
-.hero h1 { font-size:2.4rem; }
-.hero .lofte { font-family:Georgia,serif; font-size:1.35rem; line-height:1.3; color:#f2e5d0; margin:.3em 0 .6em; }
-.hero .lofte em { color:#d9b36a; font-style:italic; }
-.hero p { margin:.4em 0; }
-.appstore { display:inline-block; margin:1em 0 .5em; padding:14px 26px; border-radius:14px;
-  background:#d9b36a; color:#1a090e; font-weight:700; text-decoration:none; font-size:1.05rem; }
-.appstore:hover { background:#f2e5d0; }
-.krav { color:#bda58c; font-size:.85rem; }
-.bilder { display:flex; gap:12px; justify-content:center; margin:2em -8px 0; }
-.bilder img { width:32%; max-width:200px; height:auto; border-radius:14px; display:block; }
-@media (max-width:520px) { .bilder { flex-wrap:wrap; } .bilder img { width:46%; } }
-.punkter { list-style:none; padding:0; margin:2em 0 0; text-align:left; }
-.punkter li { padding:.35em 0; border-bottom:1px solid #3a2028; }
-.punkter strong { color:#d9b36a; }
+/* Topp */
+.topp { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:48px; }
+.topp .merke { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--tekst); }
+.topp .merke svg { width:30px; height:30px; }
+.topp nav a { color:var(--dempet); text-decoration:none; margin-left:18px; font-size:.95rem; }
+.topp nav a:hover { color:var(--gull); }
 
-/* Forside v2 (2026-11-05): merker, seks kort, tre steg, fire skjermbilder — FAQ under */
-main { max-width:720px; }
-.merker { list-style:none; padding:0; margin:1.4em 0 0; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
-.merker li { font-size:.82rem; color:#f2e5d0; background:#2a1219; border:1px solid #3a2028; border-radius:999px; padding:4px 12px; }
-h2.seksjon { font-size:1.5rem; color:#f2e5d0; text-align:center; margin:2.6em 0 .9em; }
-.kort { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.kort > div { background:#22101600; border:1px solid #3a2028; border-radius:16px; padding:16px 18px; }
-.kort h3 { font-family:Georgia,serif; color:#d9b36a; font-size:1.05rem; margin:0 0 .3em; }
-.kort p { margin:0; font-size:.95rem; color:#e6d6c2; }
-@media (max-width:560px) { .kort { grid-template-columns:1fr; } }
-.steg { counter-reset:steg; list-style:none; padding:0; margin:0; }
-.steg li { counter-increment:steg; position:relative; padding:.5em 0 .5em 2.6em; border-bottom:1px solid #3a2028; }
-.steg li::before { content:counter(steg); position:absolute; left:0; top:.55em; width:1.7em; height:1.7em; border-radius:50%;
-  background:#d9b36a; color:#1a090e; font-weight:700; text-align:center; line-height:1.7em; font-size:.9rem; }
-.steg strong { color:#d9b36a; }
-.bilder.fire img { width:23%; max-width:170px; }
-@media (max-width:560px) { .bilder.fire img { width:46%; max-width:none; } }
-section > h2:not(.seksjon) { font-size:1.1rem; }
+/* Hero: tekst venstre, telefon høyre */
+.hero { display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center; margin-bottom:72px; }
+.hero .lofte { font-size:clamp(2.1rem,4.6vw,3.3rem); line-height:1.08; margin:0 0 .5em; font-weight:600; color:#fff; }
+.hero .lofte em { font-style:italic; color:var(--gull2); }
+.hero p { margin:.4em 0; font-size:1.1rem; color:#e6d8c8; max-width:34em; }
+.appstore { display:inline-flex; align-items:center; gap:10px; margin:1.2em 0 .6em; padding:15px 26px; border-radius:14px;
+  background:linear-gradient(180deg,var(--gull2),var(--gull)); color:#1a090e; font-weight:700; text-decoration:none; font-size:1.05rem;
+  box-shadow:0 10px 30px rgba(226,189,109,.25); }
+.appstore:hover { filter:brightness(1.06); }
+.appstore svg { width:20px; height:20px; }
+.krav { color:var(--dempet); font-size:.85rem; margin-top:.2em; }
+.merker { list-style:none; padding:0; margin:1.2em 0 0; display:flex; flex-wrap:wrap; gap:8px; }
+.merker li { font-size:.8rem; color:var(--tekst); background:rgba(255,255,255,.04); border:1px solid var(--kant); border-radius:999px; padding:4px 12px; }
+.telefon { position:relative; justify-self:center; }
+.telefon img { width:min(300px,80vw); display:block; border-radius:34px; border:6px solid #0b0405;
+  box-shadow:0 40px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06); transform:rotate(-3deg); }
+.telefon::before { content:""; position:absolute; inset:-30px; border-radius:50%; z-index:-1;
+  background:radial-gradient(closest-side, rgba(226,189,109,.18), transparent); }
+
+/* Seksjoner */
+h2.seksjon { font-size:clamp(1.6rem,3vw,2.1rem); color:#fff; text-align:center; margin:0 0 .35em; font-weight:600; }
+.ingress { text-align:center; color:var(--dempet); margin:0 auto 2em; max-width:40em; }
+section { margin-bottom:80px; }
+.kort { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.kort > div { background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02)); border:1px solid var(--kant); border-radius:20px; padding:22px 22px 20px; }
+.kort svg { width:30px; height:30px; color:var(--gull); margin-bottom:12px; }
+.kort h3 { color:#fff; font-size:1.1rem; margin:0 0 .35em; font-weight:600; }
+.kort p { margin:0; font-size:.95rem; color:#d9c8b6; }
+.steg { counter-reset:steg; list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.steg li { counter-increment:steg; background:var(--flate); border:1px solid var(--kant); border-radius:20px; padding:22px; }
+.steg li::before { content:counter(steg); display:inline-block; width:2em; height:2em; border-radius:50%; margin-bottom:10px;
+  background:var(--gull); color:#1a090e; font-weight:700; text-align:center; line-height:2em; }
+.steg strong { display:block; color:#fff; font-family:Fraunces,Georgia,serif; font-size:1.1rem; margin-bottom:.2em; }
+.bilder { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.bilder img { width:100%; height:auto; display:block; border-radius:26px; border:5px solid #0b0405; box-shadow:0 24px 50px rgba(0,0,0,.55); }
+.faq h2 { font-size:1.08rem; color:var(--gull); margin:1.8em 0 .3em; }
+.faq p { color:#e0d2c2; }
+.band { text-align:center; background:linear-gradient(135deg,#3a0f1d,#1d0a10); border:1px solid var(--kant); border-radius:26px; padding:44px 24px; }
+.band .lofte { font-size:1.7rem; margin:0 0 .3em; color:#fff; }
+.band p { color:var(--dempet); margin:0; }
+
+@media (max-width:760px) {
+  .hero { grid-template-columns:1fr; gap:28px; text-align:center; }
+  .hero p { margin-left:auto; margin-right:auto; }
+  .merker { justify-content:center; }
+  .telefon img { transform:none; }
+  .kort, .steg { grid-template-columns:1fr; }
+  .bilder { grid-template-columns:1fr 1fr; gap:12px; }
+  .topp nav { display:none; }
+  section { margin-bottom:56px; }
+}
