@@ -42,8 +42,11 @@ footer { margin-top:4em; padding-top:1.5em; border-top:1px solid var(--kant); co
 .merker { list-style:none; padding:0; margin:1.2em 0 0; display:flex; flex-wrap:wrap; gap:8px; }
 .merker li { font-size:.8rem; color:var(--tekst); background:rgba(255,255,255,.04); border:1px solid var(--kant); border-radius:999px; padding:4px 12px; }
 .telefon { position:relative; justify-self:center; }
-.telefon img { width:min(300px,80vw); display:block; border-radius:34px; border:6px solid #0b0405;
-  box-shadow:0 40px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06); }
+.skjermer { position:relative; width:min(300px,80vw); aspect-ratio:600/1303; margin:0 auto; }
+.skjermer img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:34px; border:6px solid #0b0405;
+  box-shadow:0 40px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06); opacity:0; transition:opacity .9s ease; }
+.skjermer img.aktiv { opacity:1; }
+.bildetekst { text-align:center; color:var(--dempet); font-size:.9rem; margin:18px 0 0; min-height:1.4em; }
 .telefon::before { content:""; position:absolute; inset:-30px; border-radius:50%; z-index:-1;
   background:radial-gradient(closest-side, rgba(226,189,109,.18), transparent); }
 

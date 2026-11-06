@@ -12,7 +12,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="../felles.css?v=20261106">
+<link rel="stylesheet" href="../felles.css?v=20261106b">
 </head>
 <body>
 <main>
@@ -30,7 +30,7 @@
 <p class="krav">iPhone med iOS 17 eller senare · sommeliern kräver Apple Intelligence</p>
 <ul class="merker"><li>Hela butikssortimentet</li><li>Lager direkt</li><li>Sommelier på svenska</li><li>Oberoende av Systembolaget</li><li>Även i Norge</li></ul>
 </div>
-<div class="telefon"><img src="../bilder/sv/1-utforska.jpg" alt="Startskärmen: röda viner i lager i din butik, rankade efter betyg"></div>
+<div class="telefon"><div class="skjermer"><img src="../bilder/sv/1-utforska.jpg" alt="Startskärmen: röda viner i lager i din butik, rankade efter betyg" data-tekst="Lagret i din butik, rankat" class="aktiv"><img src="../bilder/sv/4-sommelier.jpg" alt="Sommeliern svarar med viner som finns i din butik" data-tekst="Fråga sommeliern om maten" loading="lazy"><img src="../bilder/sv/3-vinlista.jpg" alt="Vinlistan fotograferad och rankad" data-tekst="Skanna vinlistan på restaurangen" loading="lazy"><img src="../bilder/sv/2-vinkort.jpg" alt="Vinkortet med betyg, pris och flaskor i lager" data-tekst="Betyg, pris och lager per flaska" loading="lazy"><img src="../bilder/sv/5-overraska.jpg" alt="Överraska mig-vyn" data-tekst="Överraska mig" loading="lazy"></div><p class="bildetekst" aria-live="polite">Lagret i din butik, rankat</p></div>
 </header>
 
 <section id="funksjoner">
@@ -99,5 +99,10 @@
 VinGPT är oberoende av Systembolaget och säljer inte alkohol.
 </footer>
 </main>
+<script>
+(function(){var b=document.querySelectorAll(".skjermer img"),t=document.querySelector(".bildetekst"),i=0;
+if(b.length<2||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+setInterval(function(){b[i].classList.remove("aktiv");i=(i+1)%b.length;b[i].classList.add("aktiv");t.textContent=b[i].dataset.tekst;},3500);})();
+</script>
 </body>
 </html>

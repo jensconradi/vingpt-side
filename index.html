@@ -12,7 +12,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="felles.css?v=20261106">
+<link rel="stylesheet" href="felles.css?v=20261106b">
 </head>
 <body>
 <main>
@@ -30,7 +30,7 @@
 <p class="krav">iPhone med iOS 17 eller nyere · sommelieren krever Apple Intelligence</p>
 <ul class="merker"><li>Hele butikkutvalget</li><li>Flasketall live</li><li>Sommelier på norsk</li><li>Uavhengig av Vinmonopolet</li><li>Også i Sverige</li></ul>
 </div>
-<div class="telefon"><img src="bilder/no/1-utforsk.jpg" alt="Hovedskjermen: rødviner under 300 kr på hylla i din butikk, rangert etter vurdering"></div>
+<div class="telefon"><div class="skjermer"><img src="bilder/no/1-utforsk.jpg" alt="Hovedskjermen: rødviner under 300 kr på hylla i din butikk, rangert etter vurdering" data-tekst="Hylla i din butikk, rangert" class="aktiv"><img src="bilder/no/4-sommelier.jpg" alt="Sommelieren svarer med viner som står i din butikk" data-tekst="Spør sommelieren om maten" loading="lazy"><img src="bilder/no/3-vinkart.jpg" alt="Vinkartet fotografert og rangert" data-tekst="Skann vinkartet på restauranten" loading="lazy"><img src="bilder/no/2-vinkort.jpg" alt="Vinkortet med vurdering, pris og flasker på lager" data-tekst="Vurdering, pris og lager per flaske" loading="lazy"><img src="bilder/no/5-alkoholfritt.jpg" alt="Alkoholfrie viner rangert" data-tekst="Alkoholfritt, sortert på farge" loading="lazy"><img src="bilder/no/6-butikk.jpg" alt="Butikkvelgeren" data-tekst="Velg butikken din" loading="lazy"></div><p class="bildetekst" aria-live="polite">Hylla i din butikk, rangert</p></div>
 </header>
 
 <section id="funksjoner">
@@ -99,5 +99,10 @@
 VinGPT er uavhengig av Vinmonopolet og selger ikke alkohol.
 </footer>
 </main>
+<script>
+(function(){var b=document.querySelectorAll(".skjermer img"),t=document.querySelector(".bildetekst"),i=0;
+if(b.length<2||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+setInterval(function(){b[i].classList.remove("aktiv");i=(i+1)%b.length;b[i].classList.add("aktiv");t.textContent=b[i].dataset.tekst;},3500);})();
+</script>
 </body>
 </html>
