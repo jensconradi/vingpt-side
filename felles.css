@@ -1,4 +1,4 @@
-/* VinGPT-sida — felles stil. v3 05.11.2026: hero med telefon, systemfont (Jens 06.11: rett telefon, ingen webfonter), kort med ikon. */
+/* VinGPT-sida — felles stil (sidene bygges av bygg.py). v3 05.11.2026: hero med telefon, systemfont (Jens 06.11: rett telefon, ingen webfonter), kort med ikon. */
 :root {
   color-scheme: dark;
   --bg:#150709; --bg2:#23090f; --flate:#2a0f16; --kant:#3d1a24; --tekst:#f3e8d8; --dempet:#bfa48f;
@@ -14,7 +14,7 @@ body { margin:0; background:var(--bg); color:var(--tekst);
   background-repeat:no-repeat; }
 main { max-width:1040px; margin:0 auto; padding:40px 24px 80px; }
 h1,h2,h3,.lofte { font-family:-apple-system,system-ui,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.01em; font-weight:700; }
-h1 { font-size:1.6rem; margin:0; color:var(--tekst); }
+.merkenavn { font-size:1.6rem; font-weight:700; letter-spacing:-.01em; }
 h2 { color:var(--gull); font-size:1.15rem; margin:2em 0 .4em; font-weight:600; }
 a { color:var(--gull); }
 strong { color:#fff; }
@@ -27,6 +27,9 @@ footer { margin-top:4em; padding-top:1.5em; border-top:1px solid var(--kant); co
 .topp .merke svg { width:30px; height:30px; }
 .topp nav a { color:var(--dempet); text-decoration:none; margin-left:18px; font-size:.95rem; }
 .topp nav a:hover { color:var(--gull); }
+.sprak { margin-left:18px; padding-left:18px; border-left:1px solid var(--kant); white-space:nowrap; }
+.sprak a { margin-left:12px; font-size:.85rem; }
+.sprak a[aria-current] { color:var(--gull); font-weight:600; }
 
 /* Hero: tekst venstre, telefon høyre */
 .hero { display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center; margin-bottom:72px; }
@@ -47,6 +50,9 @@ footer { margin-top:4em; padding-top:1.5em; border-top:1px solid var(--kant); co
   box-shadow:0 40px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06); opacity:0; transition:opacity .9s ease; }
 .skjermer img.aktiv { opacity:1; }
 .bildetekst { text-align:center; color:var(--dempet); font-size:.9rem; margin:18px 0 0; min-height:1.4em; }
+.prikker { display:flex; justify-content:center; gap:8px; margin-top:10px; }
+.prikker button { width:8px; height:8px; padding:0; border:0; border-radius:50%; background:var(--kant); cursor:pointer; transition:background .3s, transform .3s; }
+.prikker button.aktiv { background:var(--gull); transform:scale(1.3); }
 .telefon::before { content:""; position:absolute; inset:-30px; border-radius:50%; z-index:-1;
   background:radial-gradient(closest-side, rgba(226,189,109,.18), transparent); }
 
@@ -66,7 +72,7 @@ section { margin-bottom:80px; }
 .steg strong { display:block; color:#fff; font-size:1.1rem; margin-bottom:.2em; }
 .bilder { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
 .bilder img { width:100%; height:auto; display:block; border-radius:26px; border:5px solid #0b0405; box-shadow:0 24px 50px rgba(0,0,0,.55); }
-.faq h2 { font-size:1.08rem; color:var(--gull); margin:1.8em 0 .3em; }
+.faq h3 { font-size:1.08rem; color:var(--gull); margin:1.8em 0 .3em; font-weight:600; }
 .faq p { color:#e0d2c2; }
 .band { text-align:center; background:linear-gradient(135deg,#3a0f1d,#1d0a10); border:1px solid var(--kant); border-radius:26px; padding:44px 24px; }
 .band .lofte { font-size:1.7rem; margin:0 0 .3em; color:#fff; }
@@ -79,6 +85,7 @@ section { margin-bottom:80px; }
 
   .kort, .steg { grid-template-columns:1fr; }
   .bilder { grid-template-columns:1fr 1fr; gap:12px; }
-  .topp nav { display:none; }
+  .topp nav a.anker { display:none; }
+  .sprak { margin-left:0; padding-left:0; border:0; }
   section { margin-bottom:56px; }
 }

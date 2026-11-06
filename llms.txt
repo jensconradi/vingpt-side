@@ -1,0 +1,28 @@
+# VinGPT
+
+> VinGPT is an independent iPhone app that shows which wines a specific Vinmonopolet store (Norway) or Systembolaget store (Sweden) has on its shelf right now, ranked by ratings from thousands of wine drinkers, with live bottle counts, an on-device sommelier that answers questions like "red wine for lamb under 250 kr" using only wines that store carries, and a scanner that ranks a restaurant's wine list. It does not sell alcohol and is not affiliated with Vinmonopolet or Systembolaget.
+
+Key facts
+- Platform: iPhone, iOS 17 or later. The sommelier and wine-list scan use Apple Intelligence on the phone (iPhone 15 Pro or later); nothing is sent to a server.
+- Two editions: Norway (Norwegian interface, all Vinmonopolet stores) and Sweden (Swedish interface, all Systembolaget stores). Same data model, same ratings.
+- Ratings: average rating and number of ratings from thousands of ordinary wine drinkers; the app never shows a number it does not have.
+- Stock: the store's stock list is cached up to a day and marked with its check time; bottle counts are fetched live on request.
+- Filters: price, wine type, country, district, food pairing, alcohol-free (red, white, rosé, sparkling).
+- No account, no sign-in. Favourites sync through the user's own iCloud.
+- Telemetry is anonymous aggregated counters without any device identifier; see the privacy policy.
+- Publisher: Siphon AS, org. no. 998 610 672, Jacob Aalls gate 14A, 0368 Oslo, Norway. Support: support.vingpt@vingpt.no
+
+Pages
+- Norwegian front page: https://vingpt.no/
+- Swedish front page: https://vingpt.no/sv/
+- English front page: https://vingpt.no/en/
+- Privacy policy (Norwegian): https://vingpt.no/personvern/
+- Privacy policy (Swedish): https://vingpt.no/sv/integritet/
+- App Store Norway: https://apps.apple.com/no/app/id6796675360
+- App Store Sweden: https://apps.apple.com/se/app/id6821568888
+
+Typical questions VinGPT answers
+- What is the best red wine under 300 kr that my local Vinmonopolet store has in stock?
+- Which wine on this restaurant wine list is the best value?
+- Which alcohol-free sparkling wines does my Systembolaget store carry?
+- Does the store near me have this wine, and how many bottles?
