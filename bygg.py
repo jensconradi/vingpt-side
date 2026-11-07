@@ -38,7 +38,7 @@ SIDER = {
   nav=[("#funksjoner", "Funksjoner"), ("#faq", "Spørsmål")],
   lofte="Hva er den beste vinen <em>din polbutikk</em> har inne?",
   ingress="Velg din Vinmonopol-butikk og se alt som står på hylla, rangert etter vurderinger fra tusenvis av andre vinelskere. Spør på vanlig norsk: «rødvin til lam under 250 kr». På restauranten: ta bilde av vinkartet.",
-  knapp="Hent i App Store", krav="iPhone med iOS 17 eller nyere · sommelieren krever Apple Intelligence",
+  knapp="Hent i App Store", krav="iPhone med iOS 17 eller nyere · sommelieren krever Apple Intelligence · <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=Si%20ifra%20hvis%20VinGPT%20kommer%20p%C3%A5%20Android.\">Android? Si ifra</a>",
   merker=["Hele butikkutvalget", "Flasketall live", "Sommelier på norsk", "Uavhengig av Vinmonopolet", "Også i Sverige"],
   funk_h="Hva kan VinGPT hjelpe med?", funk_i="Ikke hele Norge. Butikken du faktisk går til, og det som står der nå.",
   kort=[("Hylla i din butikk, rangert", "Det som står i butikken du går til, sortert etter vurdering. Filtrer på pris, vintype, land og hva maten er."),
@@ -60,6 +60,7 @@ SIDER = {
        ("Krever appen konto?", "Nei. Ingen innlogging, ingen registrering. Favoritter følger din egen iCloud automatisk."),
        ("Er VinGPT en del av Vinmonopolet?", "Nei. VinGPT er en uavhengig app uten tilknytning til Vinmonopolet. Appen selger ikke alkohol og har ingen kjøpsfunksjon."),
        ("Finnes appen i Sverige?", "Ja, med Systembolagets butikker: <a href=\"sv/\">VinGPT för Sverige</a>."),
+       ("Finnes appen på Android?", "Ikke ennå, bare iPhone. Vil du ha den på Android? <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=Si%20ifra%20hvis%20VinGPT%20kommer%20p%C3%A5%20Android.\">Si ifra på e-post</a>, så gir vi beskjed hvis den kommer. Det hjelper oss også å se om det er verdt å lage."),
        ("Utgiver", "VinGPT utgis av Siphon AS (org.nr. 998 610 672), Jacob Aalls gate 14A, 0368 Oslo."),
        ("Kontakt", "Tilbakemeldinger og feilrapporter: <a href=\"mailto:support.vingpt@vingpt.no\">support.vingpt@vingpt.no</a><br>(eller bruk «Send tilbakemelding» i appen — da følger versjon og katalogdato med automatisk).")],
   bunn=[("personvern/", "Personvernerklæring")], bunn_tekst="VinGPT er uavhengig av Vinmonopolet og selger ikke alkohol.",
@@ -75,7 +76,7 @@ SIDER = {
   nav=[("#funksjoner", "Funktioner"), ("#faq", "Frågor")],
   lofte="Vilket är det bästa vinet i lager <em>på ditt Systembolag</em>?",
   ingress="Välj din Systembolagsbutik och se vinerna som finns i lager där, rankade efter betyg från tusentals andra vinälskare. Fråga på vanlig svenska: ”rött vin till lamm under 150 kr”. På restaurangen: fotografera vinlistan.",
-  knapp="Hämta i App Store", krav="iPhone med iOS 17 eller senare · sommeliern kräver Apple Intelligence",
+  knapp="Hämta i App Store", krav="iPhone med iOS 17 eller senare · sommeliern kräver Apple Intelligence · <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=S%C3%A4g%20till%20om%20VinGPT%20kommer%20p%C3%A5%20Android.\">Android? Säg till</a>",
   merker=["Hela butikssortimentet", "Lager direkt", "Sommelier på svenska", "Oberoende av Systembolaget", "Även i Norge"],
   funk_h="Vad kan VinGPT hjälpa till med?", funk_i="Inte hela Sverige. Butiken du faktiskt går till, och det som finns där nu.",
   kort=[("Lagret i din butik, rankat", "Det som finns i butiken du går till, sorterat efter betyg. Filtrera på pris, vintyp, land och vad du ska äta."),
@@ -97,6 +98,7 @@ SIDER = {
        ("Behöver jag ett konto?", "Nej. Ingen inloggning och ingen registrering. Favoriter följer ditt eget iCloud automatiskt."),
        ("Är VinGPT en del av Systembolaget?", "Nej. VinGPT är en fristående app som inte är ansluten till Systembolaget. Appen säljer inte alkohol och har ingen köpfunktion."),
        ("Finns appen i Norge?", "Ja, med Vinmonopolets butiker: <a href=\"../\">VinGPT for Norge</a>."),
+       ("Finns appen för Android?", "Inte än, bara för iPhone. Vill du ha den på Android? <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=S%C3%A4g%20till%20om%20VinGPT%20kommer%20p%C3%A5%20Android.\">Säg till via e-post</a>, så hör vi av oss om den kommer. Det hjälper oss också att se om det är värt att bygga."),
        ("Utgivare", "VinGPT ges ut av Siphon AS (org.nr. 998 610 672), Jacob Aalls gate 14A, 0368 Oslo, Norge."),
        ("Kontakt", "Feedback och felrapporter: <a href=\"mailto:support.vingpt@vingpt.no\">support.vingpt@vingpt.no</a><br>(eller använd ”Skicka feedback” i appen — då följer version och katalogdatum med automatiskt).")],
   bunn=[("integritet/", "Integritetspolicy")], bunn_tekst="VinGPT är oberoende av Systembolaget och säljer inte alkohol.",
@@ -112,7 +114,7 @@ SIDER = {
   nav=[("#funksjoner", "Features"), ("#faq", "FAQ")],
   lofte="What is the best wine <em>your local store</em> has in stock?",
   ingress="Pick your Vinmonopolet store in Norway or Systembolaget store in Sweden and see everything on the shelf, ranked by ratings from thousands of other wine lovers. Ask in plain language: “red wine for lamb under 250 kr”. At the restaurant: photograph the wine list.",
-  knapp="Get it on the App Store", krav="iPhone with iOS 17 or later · the sommelier needs Apple Intelligence · app interface in Norwegian (Norway) or Swedish (Sweden)",
+  knapp="Get it on the App Store", krav="iPhone with iOS 17 or later · the sommelier needs Apple Intelligence · app interface in Norwegian (Norway) or Swedish (Sweden) · <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20on%20Android&amp;body=Let%20me%20know%20if%20VinGPT%20comes%20to%20Android.\">Android? Tell us</a>",
   merker=["The whole store range", "Live bottle counts", "On-device sommelier", "Independent of the monopolies", "Norway and Sweden"],
   funk_h="What VinGPT helps with", funk_i="Not the whole country. The store you actually go to, and what is on its shelf right now.",
   kort=[("Your store's shelf, ranked", "What is in the store you go to, sorted by rating. Filter by price, wine type, country and what you are eating."),
@@ -134,6 +136,7 @@ SIDER = {
        ("The sommelier answered oddly or wrongly", "The sommelier runs on Apple's language model on the phone (needs iPhone 15 Pro or later with Apple Intelligence). It can only recommend products that actually exist in the range, and the reasoning next to each wine comes from the monopoly's own descriptions. If an answer is still wrong, tap thumbs down and tell us what was off — it helps a lot."),
        ("Does the app need an account?", "No. No sign-in, no registration. Favourites follow your own iCloud automatically."),
        ("Is VinGPT part of Vinmonopolet or Systembolaget?", "No. VinGPT is an independent app with no ties to either monopoly. The app does not sell alcohol and has no purchase function."),
+       ("Is there an Android version?", "Not yet, iPhone only. Want it on Android? <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20on%20Android&amp;body=Let%20me%20know%20if%20VinGPT%20comes%20to%20Android.\">Tell us by email</a> and we will let you know if it happens. It also helps us see whether it is worth building."),
        ("Publisher", "VinGPT is published by Siphon AS (Norwegian org. no. 998 610 672), Jacob Aalls gate 14A, 0368 Oslo, Norway."),
        ("Contact", "Feedback and bug reports: <a href=\"mailto:support.vingpt@vingpt.no\">support.vingpt@vingpt.no</a><br>(or use “Send feedback” in the app — the version and catalogue date come along automatically).")],
   bunn=[("../personvern/", "Privacy policy (Norwegian)"), ("../sv/integritet/", "Privacy policy (Swedish)")], bunn_tekst="VinGPT is independent of Vinmonopolet and Systembolaget and does not sell alcohol.",
@@ -312,6 +315,7 @@ LLMS = f"""# VinGPT
 > VinGPT is an independent iPhone app that shows which wines a specific Vinmonopolet store (Norway) or Systembolaget store (Sweden) has on its shelf right now, ranked by ratings from thousands of wine drinkers, with live bottle counts, an on-device sommelier that answers questions like "red wine for lamb under 250 kr" using only wines that store carries, and a scanner that ranks a restaurant's wine list. It does not sell alcohol and is not affiliated with Vinmonopolet or Systembolaget.
 
 Key facts
+- No Android version yet; interested users can email support.vingpt@vingpt.no.
 - Platform: iPhone, iOS 17 or later. The sommelier and wine-list scan use Apple Intelligence on the phone (iPhone 15 Pro or later); nothing is sent to a server.
 - Two editions: Norway (Norwegian interface, all Vinmonopolet stores) and Sweden (Swedish interface, all Systembolaget stores). Same data model, same ratings.
 - Ratings: average rating and number of ratings from thousands of ordinary wine drinkers; the app never shows a number it does not have.
