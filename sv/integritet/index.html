@@ -21,12 +21,21 @@ innehåller inget användar-ID, ingen enhetsinformation och ingen position,
 och kan inte kopplas till dig.</p>
 
 <h2>Vad appen gör med data</h2>
-<p><strong>Allt sker på din enhet.</strong> Vinkatalogen ligger lokalt i
-appen, sökning och filtrering görs lokalt, och sommeliern använder Apples
-språkmodell som körs på själva telefonen (Apple Intelligence). Frågorna du
-ställer till sommeliern lämnar aldrig enheten. Enda undantaget är ett
-sökord som inte gav några träffar, som räknas anonymt (se ”Anonym
-användningsstatistik”).</p>
+<p><strong>Det mesta sker på din enhet.</strong> Vinkatalogen ligger lokalt i
+appen, och sökning och filtrering görs lokalt. Ett sökord som inte gav några
+träffar räknas anonymt (se ”Anonym användningsstatistik”).</p>
+<p><strong>Sommeliern</strong> (från version 1.3.1): när du skriver till
+sommeliern skickas samtalet via vår tjänst till Anthropic, som skapar svaret
+med språkmodellen Claude. Samtalet är det du skriver och uppgifter om vinerna
+appen hittar åt dig i katalogen: namn, pris, betyg, om de finns i lager i den
+butik du valt och om de finns bland dina favoriter. Inget användar-ID, ingen
+position och ingen enhetsinformation skickas med. Vår tjänst sparar inget av
+samtalet. Anthropic behandlar det för att skapa svaret, sparar det bara under
+en begränsad tid enligt sina villkor för API-tjänsten och använder det inte för
+att träna sina modeller (<a href="https://www.anthropic.com/legal/privacy">Anthropics
+integritetspolicy</a>). Vinerna hittar appen själv i katalogen; modellen kan
+bara välja bland dem. Får appen ingen kontakt svarar sommeliern med appens egna
+regler på telefonen, och då lämnar ingenting enheten.</p>
 <p><strong>Vinlistor du skannar</strong> läses av med kameran eller från
 en bild du väljer, och texten tolkas på telefonen. Bilden skickas aldrig
 någonstans och sparas inte av appen.</p>
@@ -50,6 +59,11 @@ skickas.</li>
 <li><strong>Katalog och lagerlistor</strong> (GitHub): appen laddar ned
 en uppdaterad vinkatalog när en ny finns, och lagerlistan för den butik du
 har valt. Nedladdningen är anonym.</li>
+<li><strong>Sommeliern</strong> (VinGPT-tjänst och Anthropic): se ”Sommeliern”
+ovan. Tjänsten räknar per dag bara hur många svar som gick igenom den, hur
+många som misslyckades och hur mycket text språkmodellen behandlade (för att
+följa drift och kostnad) — aldrig innehållet, och inget som kan kopplas till
+dig.</li>
 <li><strong>Uppslag av vinlistor</strong> (VinGPT-tjänst): när en skanning av
 en vinlista hittar viner som inte finns i appens katalog skickas namnen på
 dem — producent och vin som text, utan årgång — till tjänsten, som slår upp
@@ -64,7 +78,10 @@ träffar, och ett sökord som inte gav träffar (med små bokstäver, högst 80
 tecken); om en sökning utan träffar följdes upp med knappen till sommeliern
 eller ett stavningsförslag; om en sökning fick träffar först när ord som inget vin har släpptes; vilka filter som användes (till exempel pris eller land); att
 sommeliern fick en ny fråga (aldrig själva frågan), vilken väg den
-svarade, om svaret fick tumme upp eller ned, och vilken regel som fick den
+svarade (appens regler, språkmodellen på telefonen eller sommeliern via
+Anthropic — och om den fick falla tillbaka på appens regler och varför: nät,
+tidsgräns, tak eller avvisad), om svaret från Anthropic kom med vinkort eller
+bara text, om svaret fick tumme upp eller ned, och vilken regel som fick den
 att avböja en fråga; när du ger tummen upp eller ner: vilken typ av svar,
 rätt och vintyp det gällde (till exempel ”fisk” och ”vitt vin” — aldrig
 vilka viner eller själva frågan), räknat var för sig; vilket skäl du
