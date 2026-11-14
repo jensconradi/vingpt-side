@@ -10,7 +10,7 @@
 <main>
 <div class="glass">🍷</div>
 <h1>Personvernerklæring</h1>
-<p class="moden">VinGPT · Sist oppdatert 9. november 2026</p>
+<p class="moden">VinGPT · Sist oppdatert 14. november 2026</p>
 
 <h2>Kort versjon</h2>
 <p>VinGPT samler ikke inn personopplysninger. Ingen konto, ingen
@@ -22,12 +22,22 @@ vinkatalogen har hull (se under). Ingen av delene inneholder bruker-ID,
 enhetsinformasjon eller posisjon, og ingen av dem kan knyttes til deg.</p>
 
 <h2>Hva appen gjør med data</h2>
-<p><strong>Alt skjer på din enhet.</strong> Vinkatalogen ligger lokalt i
-appen, søk og filtrering kjøres lokalt, og AI-sommelieren bruker Apples
-språkmodell som kjører på selve telefonen (Apple Intelligence). Ingen
-spørsmål du stiller sommelieren forlater enheten. Eneste unntak er et
-søkeord som ikke ga treff, som telles anonymt (se «Anonym
-bruksstatistikk»).</p>
+<p><strong>Det meste skjer på din enhet.</strong> Vinkatalogen ligger
+lokalt i appen, og søk og filtrering kjøres lokalt. Et søkeord som ikke ga
+treff telles anonymt (se «Anonym bruksstatistikk»).</p>
+<p><strong>Sommelieren</strong> (fra versjon 1.3.1): når du skriver til
+sommelieren, sendes samtalen via vår tjeneste til Anthropic, som lager
+svaret med språkmodellen Claude. Samtalen er det du skriver og
+opplysninger om vinene appen finner til deg i katalogen: navn, pris,
+vurdering, om de står på lager i butikken du har valgt, og om de er blant
+favorittene dine. Ingen bruker-ID, posisjon eller enhetsinformasjon sendes
+med. Vår tjeneste lagrer ingenting av samtalen. Anthropic behandler den
+for å lage svaret, lagrer den bare i en begrenset periode etter sine
+vilkår for API-tjenesten, og bruker den ikke til å trene modellene sine
+(<a href="https://www.anthropic.com/legal/privacy">Anthropics
+personvernerklæring</a>). Vinene finner appen selv i katalogen; modellen
+kan bare velge blant dem. Får appen ikke kontakt, svarer sommelieren med
+appens egne regler på telefonen, og da forlater ingenting enheten.</p>
 <p><strong>Favoritter og innstillinger</strong> (valgt butikk, filtre)
 lagres lokalt på enheten. Favoritter synkroniseres mellom dine egne enheter
 via din private iCloud-konto (Apples nøkkelverdilager). Vi har ingen
@@ -52,6 +62,9 @@ mellomlagring, slik at andre brukere slipper å gjenta det samme
 oppslaget. Observasjonen handler om en butikkhylle, ikke om deg: den
 inneholder ingen bruker-ID, ingen enhetsinformasjon og ingen posisjon,
 og kan ikke knyttes til din identitet.</li>
+<li><strong>Sommelieren</strong> (VinGPT-tjeneste og Anthropic): se
+«Sommelieren» over. Tjenesten teller bare hvor mange samtaler som går
+gjennom den per dag, uten noe som kan knytte dem til deg.</li>
 <li><strong>Oppslag av vinkart</strong> (VinGPT-tjeneste): når en skanning av
 et vinkart finner viner som ikke står i appens katalog, sendes navnene på
 dem — produsent og vin som tekst, uten årgang — til tjenesten, som slår opp
@@ -65,7 +78,9 @@ enkle tellere — hvilken vinkategori som ble vist; om et søk ga treff, og
 et søkeord som ikke ga treff (med små bokstaver, maks 80 tegn); om et søk
 uten treff ble fulgt opp med knappen til sommelieren eller et staveforslag; om et søk fikk treff først etter at ord ingen vin har ble sluppet; hvilke
 filtre som ble brukt (for eksempel pris eller land); at sommelieren fikk
-et nytt spørsmål (aldri selve spørsmålet), hvilken vei den svarte, om
+et nytt spørsmål (aldri selve spørsmålet), hvilken vei den svarte (appens
+regler, språkmodellen på telefonen, eller sommelieren via Anthropic — og om
+den måtte falle tilbake på appens regler), om
 svaret fikk tommel opp eller ned, og hvilken regel som fikk den til å
 avvise et spørsmål; når du gir tommel opp eller ned: hvilken type svar,
 rett og vintype det gjaldt (for eksempel «fisk» og «hvitvin» — aldri
