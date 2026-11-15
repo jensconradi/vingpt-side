@@ -162,10 +162,31 @@ hylleobservasjoner kommer fra den ekte appen, bruker appen Apples App
 Attest: telefonen lager en anonym nøkkel som bare bekrefter at appen er
 ekte. Den inneholder ingen opplysninger om deg, og vi lagrer den ikke.</p>
 
+<h2>Android</h2>
+<p>VinGPT for Android gjør det samme som beskrevet over, med disse forskjellene:</p>
+<ul>
+<li><strong>Vinkart</strong>: teksten på bildet leses på telefonen med Googles
+ML Kit (innebygd modell). Bildet sendes aldri. ML Kit sender selv diagnose- og
+bruksdata til Google — enhets- og appinformasjon, ytelsestall, feilkoder og en
+identifikator per installasjon som ikke skal identifisere deg eller enheten
+(<a href="https://developers.google.com/ml-kit/android-data-disclosure">Googles
+beskrivelse</a>).</li>
+<li><strong>Favoritter</strong> lagres på telefonen og tas med i Androids
+sikkerhetskopi til din egen Google-konto. Vi har ingen tilgang til dem.</li>
+<li><strong>Delte hylleobservasjoner</strong>: Android-appen leser den felles
+mellomlagringen, men deler ikke egne observasjoner.</li>
+<li><strong>Ekte app</strong>: i stedet for Apples App Attest bruker
+Android-appen Googles Play Integrity. Google Play-tjenestene på telefonen
+bekrefter overfor Google at appen er ekte og installert fra Google Play; vår
+tjeneste får bare svaret og lagrer det ikke.</li>
+<li><strong>Anonym bruksstatistikk</strong> sendes bare fra appen slik den er
+installert fra Google Play, med de samme tellerne og reglene som over.</li>
+</ul>
+
 <h2>Hva vi ikke gjør</h2>
 <ul>
 <li>Ingen brukerkontoer eller innlogging</li>
-<li>Ingen sporing og ingen annonser, og ingen tredjeparts analyse-, sporings- eller annonseverktøy (ingen tredjeparts-SDK-er)</li>
+<li>Ingen sporing og ingen annonser, og ingen tredjeparts analyse-, sporings- eller annonseverktøy (på iPhone ingen tredjeparts-SDK-er; på Android bare Googles ML Kit, se «Android»)</li>
 <li>Ingen deling eller salg av data til andre</li>
 <li>Ingen push-varsler</li>
 </ul>
@@ -177,7 +198,7 @@ katalogen og knyttes aldri til deg.</p>
 
 <h2>Aldersgrense</h2>
 <p>Appen omhandler alkoholholdige varer og er merket med aldersgrense i
-App Store. Appen selger ikke alkohol, og du kan ikke kjøpe vin i den. Det eneste som kan
+App Store og Google Play. Appen selger ikke alkohol, og du kan ikke kjøpe vin i den. Det eneste som kan
 kjøpes i appen, er abonnementet VinGPT+.</p>
 
 <h2>Utgiver</h2>
@@ -185,7 +206,7 @@ kjøpes i appen, er abonnementet VinGPT+.</p>
 0368 Oslo. Siphon AS er behandlingsansvarlig for denne appen.</p>
 
 <h2>Hvis du sender oss e-post</h2>
-<p>Skriver du til oss, får vi e-postadressen din og det du skriver. Det brukes bare til å svare deg. Ber du om beskjed hvis VinGPT kommer på Android, brukes adressen bare til den ene beskjeden, og den slettes når beskjeden er sendt eller hvis vi bestemmer oss for ikke å lage en Android-app. Du kan når som helst be oss slette den.</p>
+<p>Skriver du til oss, får vi e-postadressen din og det du skriver. Det brukes bare til å svare deg. Ba du om beskjed da VinGPT kom på Android, ble adressen bare brukt til den ene beskjeden og slettet etterpå. Du kan når som helst be oss slette den.</p>
 
 <h2>Kontakt</h2>
 <p>Spørsmål om personvern:
