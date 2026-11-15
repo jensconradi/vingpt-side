@@ -64,7 +64,7 @@ SIDER = {
        ("Finnes appen på Android?", "Ikke ennå, bare iPhone. Vil du ha den på Android? <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=Si%20ifra%20hvis%20VinGPT%20kommer%20p%C3%A5%20Android.\">Si ifra på e-post</a>, så gir vi beskjed hvis den kommer. Det hjelper oss også å se om det er verdt å lage."),
        ("Utgiver", "VinGPT utgis av Siphon AS (org.nr. 998 610 672), Jacob Aalls gate 14A, 0368 Oslo."),
        ("Kontakt", "Tilbakemeldinger og feilrapporter: <a href=\"mailto:support.vingpt@vingpt.no\">support.vingpt@vingpt.no</a><br>(eller bruk «Send tilbakemelding» i appen — da følger versjon og katalogdato med automatisk).")],
-  bunn=[("personvern/", "Personvernerklæring")], bunn_tekst="VinGPT er uavhengig av Vinmonopolet og selger ikke alkohol.",
+  bunn=[("personvern/", "Personvernerklæring"), ("vilkar/", "Vilkår")], bunn_tekst="VinGPT er uavhengig av Vinmonopolet og selger ikke alkohol.",
   org_navn="VinGPT", land="NO", kategori="LifestyleApplication",
 ),
 "sv": dict(
@@ -103,7 +103,7 @@ SIDER = {
        ("Finns appen för Android?", "Inte än, bara för iPhone. Vill du ha den på Android? <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=S%C3%A4g%20till%20om%20VinGPT%20kommer%20p%C3%A5%20Android.\">Säg till via e-post</a>, så hör vi av oss om den kommer. Det hjälper oss också att se om det är värt att bygga."),
        ("Utgivare", "VinGPT ges ut av Siphon AS (org.nr. 998 610 672), Jacob Aalls gate 14A, 0368 Oslo, Norge."),
        ("Kontakt", "Feedback och felrapporter: <a href=\"mailto:support.vingpt@vingpt.no\">support.vingpt@vingpt.no</a><br>(eller använd ”Skicka feedback” i appen — då följer version och katalogdatum med automatiskt).")],
-  bunn=[("integritet/", "Integritetspolicy")], bunn_tekst="VinGPT är oberoende av Systembolaget och säljer inte alkohol.",
+  bunn=[("integritet/", "Integritetspolicy"), ("villkor/", "Villkor")], bunn_tekst="VinGPT är oberoende av Systembolaget och säljer inte alkohol.",
   org_navn="VinGPT", land="SE", kategori="LifestyleApplication",
 ),
 "en": dict(
@@ -142,7 +142,7 @@ SIDER = {
        ("Is there an Android version?", "Not yet, iPhone only. Want it on Android? <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20on%20Android&amp;body=Let%20me%20know%20if%20VinGPT%20comes%20to%20Android.\">Tell us by email</a> and we will let you know if it happens. It also helps us see whether it is worth building."),
        ("Publisher", "VinGPT is published by Siphon AS (Norwegian org. no. 998 610 672), Jacob Aalls gate 14A, 0368 Oslo, Norway."),
        ("Contact", "Feedback and bug reports: <a href=\"mailto:support.vingpt@vingpt.no\">support.vingpt@vingpt.no</a><br>(or use “Send feedback” in the app — the version and catalogue date come along automatically).")],
-  bunn=[("../personvern/", "Privacy policy (Norwegian)"), ("../sv/integritet/", "Privacy policy (Swedish)")], bunn_tekst="VinGPT is independent of Vinmonopolet and Systembolaget and does not sell alcohol.",
+  bunn=[("../personvern/", "Privacy policy (Norwegian)"), ("../sv/integritet/", "Privacy policy (Swedish)"), ("../vilkar/", "Terms (Norwegian)"), ("../sv/villkor/", "Terms (Swedish)")], bunn_tekst="VinGPT is independent of Vinmonopolet and Systembolaget and does not sell alcohol.",
   org_navn="VinGPT", land="NO", kategori="LifestyleApplication",
 ),
 }
@@ -300,7 +300,7 @@ tel.addEventListener("mouseenter",stopp);tel.addEventListener("mouseleave",start
 
 def sitemap():
     i_dag = dt.date.today().isoformat()
-    sider = [("", "nb"), ("sv/", "sv"), ("en/", "en"), ("personvern/", None), ("sv/integritet/", None)]
+    sider = [("", "nb"), ("sv/", "sv"), ("en/", "en"), ("personvern/", None), ("sv/integritet/", None), ("vilkar/", None), ("sv/villkor/", None)]
     ut = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for sti, lang in sider:
@@ -342,6 +342,8 @@ Pages
 - English front page: {DOM}/en/
 - Privacy policy (Norwegian): {DOM}/personvern/
 - Privacy policy (Swedish): {DOM}/sv/integritet/
+- Terms of use (Norwegian): {DOM}/vilkar/
+- Terms of use (Swedish): {DOM}/sv/villkor/
 - App Store Norway: https://apps.apple.com/no/app/id6796675360
 - App Store Sweden: https://apps.apple.com/se/app/id6821568888
 

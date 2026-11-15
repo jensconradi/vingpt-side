@@ -26,6 +26,8 @@ Pages
 - English front page: https://vingpt.no/en/
 - Privacy policy (Norwegian): https://vingpt.no/personvern/
 - Privacy policy (Swedish): https://vingpt.no/sv/integritet/
+- Terms of use (Norwegian): https://vingpt.no/vilkar/
+- Terms of use (Swedish): https://vingpt.no/sv/villkor/
 - App Store Norway: https://apps.apple.com/no/app/id6796675360
 - App Store Sweden: https://apps.apple.com/se/app/id6821568888
 
