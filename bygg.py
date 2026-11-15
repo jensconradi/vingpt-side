@@ -214,6 +214,7 @@ def bygg(kode):
 <title>{d['tittel']}</title>
 <meta name="description" content="{html.escape(d['beskrivelse'])}">
 <link rel="canonical" href="{url}">
+<meta name="msvalidate.01" content="C880A6B9B083777A271F7337E14B123C">
 {hreflang}<meta property="og:title" content="{html.escape(d['og_tittel'])}">
 <meta property="og:description" content="{html.escape(d['og_beskrivelse'])}">
 <meta property="og:image" content="{DOM}{d['og_bilde']}">
