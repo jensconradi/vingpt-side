@@ -228,6 +228,7 @@ def bygg(kode):
 <meta name="apple-itunes-app" content="app-id={d['appid']}, affiliate-data=pt=129246957&ct=smartbanner">
 <meta name="theme-color" content="#150709">
 <link rel="stylesheet" href="{css}">
+<script src="/besok.js" defer></script>
 {jsonld(d)}</head>
 <body>
 <main>
