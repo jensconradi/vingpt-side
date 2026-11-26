@@ -37,9 +37,12 @@ footer { margin-top:4em; padding-top:1.5em; border-top:1px solid var(--kant); co
 .hero .lofte em { font-style:italic; color:var(--gull2); }
 .hero p { margin:.4em 0; font-size:1.1rem; color:#e6d8c8; max-width:34em; }
 .appstore { display:inline-flex; align-items:center; gap:10px; margin:1.2em 0 .6em; padding:15px 26px; border-radius:14px;
-  background:linear-gradient(180deg,var(--gull2),var(--gull)); color:#1a090e; font-weight:700; text-decoration:none; font-size:1.05rem;
+  background:linear-gradient(180deg,var(--gull2),var(--gull)); color:#1a090e; font-weight:700; text-decoration:none; font-size:1.05rem; white-space:nowrap;
   box-shadow:0 10px 30px rgba(226,189,109,.25); }
 .appstore:hover { filter:brightness(1.06); }
+.knapper { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin:1.2em 0 .6em; }
+.knapper .appstore { margin:0; }
+.band .knapper { justify-content:center; }
 .appstore svg { width:20px; height:20px; }
 .krav { color:var(--dempet); font-size:.85rem; margin-top:.2em; }
 .merker { list-style:none; padding:0; margin:1.2em 0 0; display:flex; flex-wrap:wrap; gap:8px; }
