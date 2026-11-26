@@ -17,7 +17,7 @@
 <main>
 <div class="glass">🍷</div>
 <h1>Integritetspolicy</h1>
-<p class="moden">VinGPT i Sverige · Senast uppdaterad 22 november 2026</p>
+<p class="moden">VinGPT i Sverige · Senast uppdaterad 26 november 2026</p>
 
 <h2>Kort version</h2>
 <p>VinGPT samlar inte in personuppgifter. Inget konto, ingen inloggning,
@@ -165,10 +165,29 @@ använder IP-adressen bara kortvarigt, för att begränsa hur många
 förfrågningar som kan komma från samma ställe. Begränsningen raderas
 automatiskt inom två timmar, och IP-adresser sparas inte i övrigt.</p>
 
+<h2>Android</h2>
+<p>VinGPT för Android gör samma sak som beskrivs ovan, med dessa skillnader:</p>
+<ul>
+<li><strong>Vinlistor</strong>: texten på bilden läses i telefonen med Googles
+ML Kit (inbyggd modell). Bilden skickas aldrig. ML Kit skickar själv diagnos-
+och användningsdata till Google — enhets- och appinformation, prestandasiffror,
+felkoder och en identifierare per installation som inte ska identifiera dig
+eller enheten
+(<a href="https://developers.google.com/ml-kit/android-data-disclosure">Googles
+beskrivning</a>).</li>
+<li><strong>Favoriter</strong> sparas i telefonen och ingår i Androids
+säkerhetskopia till ditt eget Google-konto. Vi har ingen åtkomst till dem.</li>
+<li><strong>Äkta app</strong>: Android-appen använder Googles Play Integrity.
+Google Play-tjänsterna i telefonen bekräftar för Google att appen är äkta och
+installerad från Google Play; vår tjänst får bara svaret och sparar det inte.</li>
+<li><strong>Anonym användningsstatistik</strong> skickas bara från appen som
+den är installerad från Google Play, med samma räkningar och regler som ovan.</li>
+</ul>
+
 <h2>Vad vi inte gör</h2>
 <ul>
 <li>Inga användarkonton eller inloggning</li>
-<li>Ingen spårning och inga annonser, och inga analys-, spårnings- eller annonsverktyg från tredje part (inga SDK:er från tredje part)</li>
+<li>Ingen spårning och inga annonser, och inga analys-, spårnings- eller annonsverktyg från tredje part (på iPhone inga SDK:er från tredje part; på Android bara Googles ML Kit, se ”Android”)</li>
 <li>Ingen delning eller försäljning av data till andra</li>
 <li>Inga pushnotiser</li>
 </ul>
@@ -179,7 +198,7 @@ röster) från offentligt tillgängliga källor. De är en del av katalogen
 och kopplas aldrig till dig.</p>
 
 <h2>Åldersgräns</h2>
-<p>Appen handlar om alkoholdrycker och har åldersgräns i App Store.
+<p>Appen handlar om alkoholdrycker och har åldersgräns i App Store och Google Play.
 Sommeliern föreslår inga viner till den som uppger att den är under 20 år.
 Appen säljer inte alkohol, och du kan inte köpa vin i den. Det enda som kan
 köpas i appen är abonnemanget VinGPT+.</p>

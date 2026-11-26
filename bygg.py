@@ -9,6 +9,7 @@ IK = json.loads((ROT / "ikoner.json").read_text())
 DOM = "https://vingpt.no"
 NO_APP = "https://apps.apple.com/no/app/id6796675360?pt=129246957&ct=nettside&mt=8"
 SE_APP = "https://apps.apple.com/se/app/id6821568888?pt=129246957&ct=nettside&mt=8"
+SE_PLAY = "https://play.google.com/store/apps/details?id=se.vingpt.app&referrer=utm_source%3Dnettside"
 NO_SKJERM = [("1-utforsk", "Hylla i din butikk, rangert", "Hovedskjermen: rødviner under 300 kr på hylla i din butikk, rangert etter vurdering"),
              ("4-sommelier", "Spør sommelieren om maten", "Sommelieren svarer med viner som står i din butikk"),
              ("3-vinkart", "Skann vinkartet på restauranten", "Vinkartet fotografert og rangert"),
@@ -72,16 +73,16 @@ SIDER = {
   appnavn="VinGPT: vin på lager nær deg", land_stotte="NO", valuta="NOK", tilbud=[("VinGPT+ måned", "39"), ("VinGPT+ år", "299")],
 ),
 "sv": dict(
-  sti="sv/", lang="sv", locale="sv_SE", app=SE_APP, appid="6821568888", bilder="../bilder/sv", skjermer=SV_SKJERM, hjem="./",
+  sti="sv/", lang="sv", locale="sv_SE", app=SE_APP, play=SE_PLAY, knapp_play="Hämta på Google Play", appid="6821568888", bilder="../bilder/sv", skjermer=SV_SKJERM, hjem="./",
   tittel="VinGPT – appen som rankar vinerna på ditt Systembolag",
-  beskrivelse="Välj din Systembolagsbutik och se vinerna i lager rankade efter betyg från tusentals vinälskare. Fråga sommeliern. iPhone-app.",
+  beskrivelse="Välj din Systembolagsbutik och se vinerna i lager rankade efter betyg från tusentals vinälskare. Fråga sommeliern. iPhone och Android.",
   og_tittel="VinGPT — vilket är det bästa vinet i lager på ditt Systembolag?",
   og_beskrivelse="Det som finns i lager i din butik, sorterat efter vad tusentals människor faktiskt tycker. Fråga: ”rött vin till lamm under 150 kr”.",
   og_bilde="/bilder/sv/kort.jpg",
   nav=[("#funksjoner", "Funktioner"), ("#faq", "Frågor")],
   lofte="Vilket är det bästa vinet i lager <em>på ditt Systembolag</em>?",
   ingress="Välj din Systembolagsbutik och se de bäst betygsatta vinerna i lager där, rankade efter betyg från tusentals andra vinälskare. Fråga på vanlig svenska: ”rött vin till lamm under 150 kr”. På restaurangen: fotografera vinlistan.",
-  knapp="Hämta i App Store", krav="iPhone med iOS 17 eller senare · sommeliern svarar via nätet, och med appens egna regler utan · <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=S%C3%A4g%20till%20om%20VinGPT%20kommer%20p%C3%A5%20Android.\">Android? Säg till</a>",
+  knapp="Hämta i App Store", krav="iPhone med iOS 17 eller senare · Android 8 eller senare · sommeliern svarar via nätet",
   merker=["Din butik, rankad", "Lager i din butik", "Sommelier på svenska", "Oberoende av Systembolaget", "Även i Norge"],
   funk_h="Vad kan VinGPT hjälpa till med?", funk_i="Inte hela Sverige. Butiken du faktiskt går till, och det som finns där nu.",
   kort=[("Lagret i din butik, rankat", "Det som finns i butiken du går till, sorterat efter betyg: de tio bästa först, hela listan med VinGPT+. Filtrera på pris, vintyp, land och vad du ska äta."),
@@ -97,22 +98,22 @@ SIDER = {
   band_h="Nästa gång du står på Systembolaget", band_p="Öppna appen, välj butiken, se vad som är bäst i lager.",
   faq_h="Vanliga frågor",
   faq=[("Finns det en app som visar vilka viner mitt Systembolag har i lager, rankade efter betyg?", "Ja. I VinGPT väljer du din Systembolagsbutik och ser vinerna den har i lager, rankade efter betyg från tusentals andra vinälskare. Du kan filtrera på pris, typ, land, druva och mat. Systembolagets egen app visar lager och låter dig beställa; VinGPT säljer ingenting, men visar vad som är bäst av det butiken har."),
-       ("Vad är VinGPT?", "VinGPT är en oberoende iPhone-app för Sverige och Norge. Du väljer din Systembolagsbutik och ser vinerna den har i lager, rankade efter betyg från tusentals vindrickare. Du kan fråga sommeliern med vanliga ord, till exempel ”rött vin till lamm under 150 kr”, och fotografera vinlistan på en restaurang. Mycket av appen används utan prenumeration; prenumerationen VinGPT+ ger hela listan, antal flaskor och sommelierns hela svar. Appen säljer inte alkohol. VinGPT från vingpt.no är inte samma sak som den vietnamesiska chattboten ViGPT eller den franska vinassistenten med samma namn."),
-       ("Vad kostar VinGPT?", "Utan prenumeration får du sökning och filter, de tio bäst betygsatta vinerna i din butik, om ett vin finns i lager, sommelierns bästa val, det bästa valet på en skannad vinlista, favoriter och delning. <strong>VinGPT+</strong> ger hela listan för din butik, antal flaskor och närmaste butiker med vinet, sommelierns hela svar, alla träffar på vinlistan med hjälp att välja, och vinerna som nyligen har gått ned i pris. VinGPT+ kostar 49 kr i månaden eller 349 kr om året, med 14 dagars provperiod på årsprenumerationen. Du köper och säger upp i App Store. Se <a href=\"villkor/\">villkoren</a>."),
+       ("Vad är VinGPT?", "VinGPT är en oberoende app för iPhone och Android, för Sverige och Norge. Du väljer din Systembolagsbutik och ser vinerna den har i lager, rankade efter betyg från tusentals vindrickare. Du kan fråga sommeliern med vanliga ord, till exempel ”rött vin till lamm under 150 kr”, och fotografera vinlistan på en restaurang. Mycket av appen används utan prenumeration; prenumerationen VinGPT+ ger hela listan, antal flaskor och sommelierns hela svar. Appen säljer inte alkohol. VinGPT från vingpt.no är inte samma sak som den vietnamesiska chattboten ViGPT eller den franska vinassistenten med samma namn."),
+       ("Vad kostar VinGPT?", "Utan prenumeration får du sökning och filter, de tio bäst betygsatta vinerna i din butik, om ett vin finns i lager, sommelierns bästa val, det bästa valet på en skannad vinlista, favoriter och delning. <strong>VinGPT+</strong> ger hela listan för din butik, antal flaskor och närmaste butiker med vinet, sommelierns hela svar, alla träffar på vinlistan med hjälp att välja, och vinerna som nyligen har gått ned i pris. VinGPT+ kostar 49 kr i månaden eller 349 kr om året, med 14 dagars provperiod på årsprenumerationen. Du köper och säger upp i App Store eller Google Play. Se <a href=\"villkor/\">villkoren</a>."),
        ("Jag har använt VinGPT förut. Måste jag betala nu?", "Nej. Om du laddade ned VinGPT till iPhone före version 1.4.0 behåller du allt du har haft, utan prenumeration — även om du installerar appen igen med samma Apple-ID."),
        ("Varifrån kommer betygen?", "Från tusentals vanliga vindrickare som har betygsatt vinet, inte från en enskild recensent. Appen visar snittet och hur många som står bakom det, och visar aldrig en siffra den inte har."),
        ("Varför visar appen ett annat lager än butiken har?", "Lagerlistan (vilka viner butiken har i lager) uppdateras löpande och visar när den senast kollades. Listan säger om ett vin finns i lager, men inte hur många flaskor. Med VinGPT+ hämtas <strong>antalet flaskor</strong> direkt från Systembolaget när du trycker ”Kolla lager” på vinkortet. Dra nedåt i listan för att uppdatera lagerlistan."),
        ("Varför saknar ett vin betyg?", "Betyg finns för de flesta viner i butikernas sortiment. Viner i beställningssortimentet och helt nya årgångar kan sakna betyg — då står det att vinet saknar betyg, i stället för att appen gissar."),
        ("Vad gör jag om sommeliern svarar fel?", "Från version 1.3.1 svarar sommeliern med språkmodellen Claude via vår tjänst — samtalet sparas inte hos oss (se integritet). Den kan bara föreslå viner som finns i Systembolagets sortiment, och motiveringen vid varje vin kommer från Systembolagets egna beskrivningar. Blir ett svar ändå fel, tryck tummen ned och berätta vad som blev fel — det hjälper oss mycket."),
-       ("Behöver jag ett konto?", "Nej. Ingen inloggning och ingen registrering, inte heller för VinGPT+, som köps via App Store. Favoriter följer ditt eget iCloud automatiskt."),
+       ("Behöver jag ett konto?", "Nej. Ingen inloggning och ingen registrering, inte heller för VinGPT+, som köps via App Store eller Google Play. Favoriter följer ditt eget iCloud (iPhone) eller din Google-säkerhetskopia (Android) automatiskt."),
        ("Är VinGPT en del av Systembolaget?", "Nej. VinGPT är en fristående app som inte är ansluten till Systembolaget. Appen säljer inte alkohol, och du kan inte köpa vin i den."),
        ("Finns appen i Norge?", "Ja, med Vinmonopolets butiker: <a href=\"../\">VinGPT for Norge</a>."),
-       ("Finns appen för Android?", "Inte än, bara för iPhone. Vill du ha den på Android? <a href=\"mailto:support.vingpt@vingpt.no?subject=VinGPT%20p%C3%A5%20Android&amp;body=S%C3%A4g%20till%20om%20VinGPT%20kommer%20p%C3%A5%20Android.\">Säg till via e-post</a>, så hör vi av oss om den kommer. Det hjälper oss också att se om det är värt att bygga."),
+       ("Finns appen för Android?", "Ja. <a href=\"" + SE_PLAY + "\">VinGPT på Google Play</a>, för Android 8 eller senare, med samma butiker, betyg och sommelier som på iPhone."),
        ("Utgivare", "VinGPT ges ut av Siphon AS (org.nr. 998 610 672), Jacob Aalls gate 14A, 0368 Oslo, Norge."),
        ("Kontakt", "Feedback och felrapporter: <a href=\"mailto:support.vingpt@vingpt.no\">support.vingpt@vingpt.no</a><br>(eller använd ”Skicka feedback” i appen — då följer version och katalogdatum med automatiskt).")],
   bunn=[("integritet/", "Integritetspolicy"), ("villkor/", "Villkor")], bunn_tekst="VinGPT är oberoende av Systembolaget och säljer inte alkohol.",
   org_navn="VinGPT", land="SE", kategori="LifestyleApplication",
-  appnavn="VinGPT: vin i lager nära dig", land_stotte="SE", valuta="SEK", tilbud=[("VinGPT+ månad", "49"), ("VinGPT+ år", "349")],
+  appnavn="VinGPT: vin i lager nära dig", land_stotte="SE", os="iOS 17, Android 8", butikker=["https://apps.apple.com/se/app/id6821568888", "https://play.google.com/store/apps/details?id=se.vingpt.app"], valuta="SEK", tilbud=[("VinGPT+ månad", "49"), ("VinGPT+ år", "349")],
 ),
 "en": dict(
   sti="en/", lang="en", locale="en_GB", app=NO_APP, appid="6796675360", bilder="../bilder/no", skjermer=EN_SKJERM, hjem="./",
@@ -232,6 +233,8 @@ def bygg(kode):
     bunn = "".join(f'<a href="{h}">{t}</a> · ' for h, t in d["bunn"])
     bunn += " · ".join(f'<a href="{rel(sti, s)}" lang="{SIDER[k]["lang"]}">{n}</a>' for k, n, s in SPRAK if k != kode)
     knapp = f'<a class="appstore" href="{html.escape(d["app"])}">{IK["appstore"]}{d["knapp"]}</a>'
+    if d.get("play"):  # Google Play-knapp kun der Android-appen er live (Sverige fra 26.11)
+        knapp += f' <a class="appstore play" href="{html.escape(d["play"])}">{d["knapp_play"]}</a>'
     return f"""<!doctype html>
 <html lang="{d['lang']}">
 <head>
