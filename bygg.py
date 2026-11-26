@@ -33,8 +33,8 @@ EN_SKJERM = [("1-utforsk", "Your store's shelf, ranked", "Home screen: red wines
 SIDER = {
 "no": dict(
   sti="", lang="nb", locale="nb_NO", app=NO_APP, play=NO_PLAY, knapp_play="Hent på Google Play", appid="6796675360", bilder="bilder/no", skjermer=NO_SKJERM, hjem="./",
-  tittel="VinGPT – appen som rangerer vinene på ditt Vinmonopol",
-  beskrivelse="Velg Vinmonopol-butikken din og se vinene på hylla rangert etter vurderinger fra tusenvis av vinelskere. Spør sommelieren. iPhone og Android.",
+  tittel="VinGPT – vinapp som rangerer vinene på Vinmonopolet",
+  beskrivelse="Søk i Vinmonopolets varer og se hva din butikk har på lager, rangert etter vurdering. Spør sommelieren. iPhone og Android.",
   og_tittel="VinGPT — hva er den beste vinen din polbutikk har inne?",
   og_beskrivelse="Det som står på hylla i din butikk, sortert etter hva tusenvis av folk faktisk synes. Spør: «rødvin til lam under 250 kr».",
   og_bilde="/godvin/kort.jpg",
