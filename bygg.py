@@ -10,6 +10,7 @@ DOM = "https://vingpt.no"
 NO_APP = "https://apps.apple.com/no/app/id6796675360?pt=129246957&ct=nettside&mt=8"
 SE_APP = "https://apps.apple.com/se/app/id6821568888?pt=129246957&ct=nettside&mt=8"
 SE_PLAY = "https://play.google.com/store/apps/details?id=se.vingpt.app&referrer=utm_source%3Dnettside"
+PLAY_IKON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3.6v16.8a1 1 0 0 0 1.5.86l13.6-8.4a1 1 0 0 0 0-1.72L7.5 2.74A1 1 0 0 0 6 3.6z"/></svg>'
 NO_SKJERM = [("1-utforsk", "Hylla i din butikk, rangert", "Hovedskjermen: rødviner under 300 kr på hylla i din butikk, rangert etter vurdering"),
              ("4-sommelier", "Spør sommelieren om maten", "Sommelieren svarer med viner som står i din butikk"),
              ("3-vinkart", "Skann vinkartet på restauranten", "Vinkartet fotografert og rangert"),
@@ -234,7 +235,8 @@ def bygg(kode):
     bunn += " · ".join(f'<a href="{rel(sti, s)}" lang="{SIDER[k]["lang"]}">{n}</a>' for k, n, s in SPRAK if k != kode)
     knapp = f'<a class="appstore" href="{html.escape(d["app"])}">{IK["appstore"]}{d["knapp"]}</a>'
     if d.get("play"):  # Google Play-knapp kun der Android-appen er live (Sverige fra 26.11)
-        knapp += f' <a class="appstore play" href="{html.escape(d["play"])}">{d["knapp_play"]}</a>'
+        knapp += f'<a class="appstore play" href="{html.escape(d["play"])}">{PLAY_IKON}{d["knapp_play"]}</a>'
+    knapp = f'<div class="knapper">{knapp}</div>'
     return f"""<!doctype html>
 <html lang="{d['lang']}">
 <head>
